@@ -149,12 +149,14 @@
       <div class="grid cols-2">
         <!-- CARA -->
         <article class="mcard">
-          <div class="mstage">
+          <div class="mstage modal-trigger"
+            data-video-src="https://media.githubusercontent.com/media/SandeepGowda07/SandeepGowda07.github.io/main/data/IPA/CARA.mp4">
             <video autoplay muted playsinline loop preload="metadata">
               <source
                 src="https://media.githubusercontent.com/media/SandeepGowda07/SandeepGowda07.github.io/main/data/IPA/CARA.mp4"
                 type="video/mp4" />
             </video>
+            <div class="play-overlay"><span>▶</span></div>
           </div>
           <div class="mbody">
             <h3 class="mtitle">CARA — Computer-Aided Risk Assessment</h3>
@@ -170,12 +172,14 @@
 
         <!-- GenAI -->
         <article class="mcard">
-          <div class="mstage">
+          <div class="mstage modal-trigger"
+            data-video-src="https://media.githubusercontent.com/media/SandeepGowda07/SandeepGowda07.github.io/main/data/IPA/genai-ipa.mp4">
             <video autoplay muted playsinline loop preload="metadata">
               <source
                 src="https://media.githubusercontent.com/media/SandeepGowda07/SandeepGowda07.github.io/main/data/IPA/genai-ipa.mp4"
                 type="video/mp4" />
             </video>
+            <div class="play-overlay"><span>▶</span></div>
           </div>
           <div class="mbody">
             <h3 class="mtitle">GenAI Robot Control Frontend</h3>
@@ -191,12 +195,14 @@
 
         <!-- Master Thesis -->
         <article class="mcard">
-          <div class="mstage">
+          <div class="mstage modal-trigger"
+            data-video-src="https://media.githubusercontent.com/media/SandeepGowda07/SandeepGowda07.github.io/main/data/master-thesis/thesis.mp4">
             <video autoplay muted playsinline loop preload="metadata">
               <source
                 src="https://media.githubusercontent.com/media/SandeepGowda07/SandeepGowda07.github.io/main/data/master-thesis/thesis.mp4"
                 type="video/mp4" />
             </video>
+            <div class="play-overlay"><span>▶</span></div>
           </div>
           <div class="mbody">
             <h3 class="mtitle">Master Thesis: DQN for Vehicle Offloading</h3>
@@ -212,12 +218,14 @@
 
         <!-- Research Project -->
         <article class="mcard">
-          <div class="mstage">
+          <div class="mstage modal-trigger"
+            data-video-src="https://media.githubusercontent.com/media/SandeepGowda07/SandeepGowda07.github.io/main/data/research-project/Research_project.mp4">
             <video autoplay muted playsinline loop preload="metadata">
               <source
                 src="https://media.githubusercontent.com/media/SandeepGowda07/SandeepGowda07.github.io/main/data/research-project/Research_project.mp4"
                 type="video/mp4" />
             </video>
+            <div class="play-overlay"><span>▶</span></div>
           </div>
           <div class="mbody">
             <h3 class="mtitle">Energy Profiling in Service Robotics</h3>
@@ -233,12 +241,14 @@
 
         <!-- Order Management System -->
         <article class="mcard">
-          <div class="mstage">
+          <div class="mstage modal-trigger"
+            data-video-src="https://media.githubusercontent.com/media/SandeepGowda07/SandeepGowda07.github.io/main/data/project-oms/OMS.mp4">
             <video autoplay muted playsinline loop preload="metadata">
               <source
                 src="https://media.githubusercontent.com/media/SandeepGowda07/SandeepGowda07.github.io/main/data/project-oms/OMS.mp4"
                 type="video/mp4" />
             </video>
+            <div class="play-overlay"><span>▶</span></div>
           </div>
           <div class="mbody">
             <h3 class="mtitle">Order Management System</h3>
@@ -392,6 +402,14 @@
       </div>
     </div>
   </footer>
+
+  <!-- Video Modal (Lightbox) -->
+  <div id="video-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <video id="modal-video" controls playsinline></video>
+    </div>
+  </div>
 
 </body>
 
