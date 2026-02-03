@@ -1,162 +1,58 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sharath Nataraj — Robotics Scientist & Engineer</title>
-  <meta name="description" content="Portfolio of Sharath Nataraj — robotics scientist/engineer specializing in human–robot interaction, robot safety, perception, navigation, and control." />
-  <meta name="keywords" content="robotics, HRI, safety, computer vision, control, ROS, ROS2, Gazebo, Nvidia Omniverse, SLAM, ML" />
-  <meta property="og:title" content="Sharath Nataraj — Robotics Scientist & Engineer" />
-  <meta property="og:description" content="Robotics portfolio: projects, publications, demos, and contact." />
+  <title>Sandeep Seegehalli Akkalappa — Software Developer & Tester</title>
+  <meta name="description"
+    content="Portfolio of Sandeep Seegehalli Akkalappa — Software Developer & Tester specializing in robotics, backend systems, and automated safety." />
+  <meta name="keywords"
+    content="robotics, software developer, software tester, Python, ROS, ROS2, CI/CD, Java, Spring Boot" />
+  <meta property="og:title" content="Sandeep Seegehalli Akkalappa — Software Developer & Tester" />
+  <meta property="og:description" content="Robotics portfolio: projects, professional experience, and contact." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="/assets/og.png" />
-  <meta property="og:url" content="https://sharathbhushan.github.io" />
+  <meta property="og:image" content="assets/image.png" />
+  <meta property="og:url" content="https://SandeepGowda07.github.io" />
   <meta name="twitter:card" content="summary_large_image" />
-  <style>
-    :root{
-      --bg:#0b0d10; --surface:#111418; --text:#e6e9ef; --muted:#98a2b3; --brand:#6ee7b7; --accent:#60a5fa; --ring:#22d3ee;
-      --card:#0f1216; --shadow:0 10px 30px rgba(0,0,0,.35);
-    }
-    @media (prefers-color-scheme: light){
-      :root{--bg:#f7f7fb; --surface:#ffffff; --text:#0b0d10; --muted:#475467; --brand:#059669; --accent:#2563eb; --ring:#0ea5e9; --card:#ffffff; --shadow:0 8px 24px rgba(10, 37, 64, .15)}
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0; padding:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"}
-    a{color:var(--accent); text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:1100px; margin:0 auto; padding:24px}
-    header{position:sticky; top:0; backdrop-filter:saturate(1.2) blur(6px); background:color-mix(in srgb, var(--bg) 80%, transparent); border-bottom:1px solid color-mix(in srgb, var(--muted) 20%, transparent); z-index:50}
-    nav{display:flex; align-items:center; justify-content:space-between}
-    .brand{display:flex; gap:12px; align-items:center}
-    .avatar{width:42px; height:42px; border-radius:50%; background:linear-gradient(135deg, var(--brand), var(--accent)); box-shadow:var(--shadow)}
-    .navlinks{display:flex; gap:18px; align-items:center}
-    .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 14px; background:var(--surface); border:1px solid color-mix(in srgb, var(--muted) 20%, transparent); border-radius:14px; text-decoration:none; transition:.2s transform, .2s box-shadow}
-    .btn:hover{transform:translateY(-2px); box-shadow:var(--shadow)}
-    .btn.primary{background:linear-gradient(135deg, color-mix(in srgb, var(--brand) 70%, #fff), color-mix(in srgb, var(--accent) 60%, #fff)); color:#0b0d10; border:none}
-    .pill{display:inline-flex; gap:6px; align-items:center; padding:6px 10px; border-radius:999px; background:color-mix(in srgb, var(--muted) 10%, transparent); border:1px solid color-mix(in srgb, var(--muted) 20%, transparent); font-size:12px}
-    .hero{display:grid; grid-template-columns: 1.2fr .8fr; gap:28px; padding:32px 0}
-    .hero h1{font-size: clamp(28px, 5vw, 46px); line-height:1.15; margin:10px 0}
-    .lead{color:var(--muted); font-size:clamp(16px, 2.2vw, 18px)}
-    .tags{display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 20px}
-    .panel{background:var(--card); border:1px solid color-mix(in srgb, var(--muted) 18%, transparent); border-radius:18px; padding:18px; box-shadow:var(--shadow)}
-    .grid{display:grid; gap:18px}
-    .grid.cols-3{grid-template-columns: repeat(3, minmax(0,1fr))}
-    .grid.cols-2{grid-template-columns: repeat(2, minmax(0,1fr))}
-    section{padding:26px 0}
-    h2{font-size:22px; margin:0 0 8px}
-    .project{display:flex; gap:0; border-radius:16px; overflow:hidden; border:1px solid color-mix(in srgb, var(--muted) 18%, transparent); background:var(--card)}
-    /* keep old tiny thumbnails ONLY for non-gallery project blocks (if any) */
-    .project:not(.video-row) img{width:200px; aspect-ratio:4/3; object-fit:cover}
-    .project-body{padding:14px}
-    .kpis{display:flex; gap:12px; flex-wrap:wrap; color:var(--muted); font-size:13px}
-    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace}
-    .pub{padding:12px 0; border-bottom:1px dashed color-mix(in srgb, var(--muted) 20%, transparent)}
-    .pub:last-child{border-bottom:none}
-    details{border:1px dashed color-mix(in srgb, var(--muted) 25%, transparent); border-radius:14px; padding:10px 12px}
-    summary{cursor:pointer}
-    footer{margin-top:40px; padding:28px 0; color:var(--muted); font-size:14px; border-top:1px solid color-mix(in srgb, var(--muted) 20%, transparent)}
-    .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0}
-    .theme-toggle{cursor:pointer; border:none; background:transparent; padding:8px; border-radius:12px}
-
-    /* ===== Uniform, adaptive media tiles (video OR image) ===== */
-    .video-row{
-      display:flex;
-      flex-direction:column;
-      align-items:stretch;
-      border-radius:16px;
-      overflow:hidden;
-      background:var(--card);
-      border:1px solid color-mix(in srgb, var(--muted) 18%, transparent);
-    }
-    .video-row .media{
-      position:relative;
-      width:100%;
-      background:#000;
-      border-bottom:1px solid color-mix(in srgb, var(--muted) 18%, transparent);
-      overflow:hidden;
-      aspect-ratio:auto; /* let portrait items keep their height */
-    }
-    .video-row .media > video,
-    .video-row .media > img{
-      width:100%;
-      height:auto;
-      max-height:65vh;
-      object-fit:contain; /* prevent crop; letterbox/pillarbox */
-      display:block;
-      margin:0 auto;
-      background:#000;
-    }
-    .video-row .project-body{
-      padding:14px;
-      display:flex;
-      flex-direction:column;
-      gap:8px;
-      justify-content:flex-start;
-    }
-
-    @media (max-width: 880px){
-      .hero{grid-template-columns:1fr}
-      .grid.cols-3{grid-template-columns:1fr}
-      .grid.cols-2{grid-template-columns:1fr}
-    }
-  </style>
-  <script>
-    const setTheme = (m) => { document.documentElement.dataset.theme = m; localStorage.setItem('theme', m); };
-    const initTheme = () => { const saved = localStorage.getItem('theme'); if(saved) setTheme(saved); };
-    document.addEventListener('DOMContentLoaded', initTheme);
-
-    // Autoplay (muted) when tiles are visible, pause when not
-    document.addEventListener('DOMContentLoaded', () => {
-      const vids = Array.from(document.querySelectorAll('.video-row video'));
-      vids.forEach(v => { v.muted = true; v.playsInline = true; v.setAttribute('playsinline',''); v.setAttribute('muted',''); v.setAttribute('loop',''); });
-
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(({isIntersecting, target}) => {
-          if(isIntersecting){
-            target.play().catch(()=>{ /* ignore autoplay errors */ });
-          }else{
-            target.pause();
-          }
-        });
-      }, {threshold: 0.6});
-
-      vids.forEach(v => io.observe(v));
-    });
-  </script>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/script.js"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Sharath Nataraj",
-    "description": "Robotics scientist/engineer focusing on HRI, safety, perception, and control.",
-    "image": "https://sharathbhushan.github.io/assets/avatar.jpg",
-    "url": "https://sharathbhushan.github.io",
+    "name": "Sandeep Seegehalli Akkalappa",
+    "description": "Software Developer & Tester specializing in robotics, backend systems, and automated safety.",
+    "image": "https://SandeepGowda07.github.io/assets/avatar.jpg",
+    "url": "https://SandeepGowda07.github.io",
     "sameAs": [
-      "https://github.com/SHARATHbhushan",
-      "https://www.linkedin.com/in/sharath-n-069605147/",
-      "https://www.youtube.com/@sharathn2328"
+      "https://github.com/SandeepGowda07",
+      "https://www.linkedin.com/in/sandeep-seegehalli-akkalappa"
     ]
   }
   </script>
 </head>
+
 <body>
   <header>
     <div class="container">
       <nav aria-label="Primary">
         <div class="brand">
-          <div class="avatar" aria-hidden="true"></div>
+          <div class="avatar">
+            <img src="assets/image.png" alt="Sandeep Avatar">
+          </div>
           <div>
-            <strong>Sharath Nataraj</strong><br/>
-            <span class="mono" style="font-size:12px; color:var(--muted)">Robotics Scientist & Engineer · HRI · Safety · Perception</span>
+            <div style="font-weight:800; font-size:18px">Sandeep Seegehalli Akkalappa</div>
+            <div style="font-size:11px; color:var(--muted)">Software Developer & Tester · Robotics</div>
           </div>
         </div>
         <div class="navlinks">
           <a class="btn" href="#projects">Projects</a>
-          <a class="btn" href="#publications">Publications</a>
-          <a class="btn" href="#media">Media</a>
-          <a class="btn" href="#talks">Activities</a>
-          <a class="btn" href="cv.pdf" target="_blank" rel="noopener">CV</a>
-          <button class="theme-toggle btn" aria-label="Toggle theme" onclick="setTheme(document.documentElement.dataset.theme==='light'?'dark':'light')">
+          <a class="btn" href="#experience">Experience</a>
+          <a class="btn" href="#education">Education</a>
+          <a class="btn" href="assets/resume_sandeep.pdf" target="_blank" rel="noopener">CV</a>
+          <button class="theme-toggle btn" aria-label="Toggle theme"
+            onclick="setTheme(document.documentElement.dataset.theme==='light'?'dark':'light')">
             <span aria-hidden="true">🌓</span>
           </button>
         </div>
@@ -165,398 +61,315 @@
   </header>
 
   <main>
-    <section class="container hero">
+    <section class="container hero-pro">
       <div>
-        <span class="pill">Open to collaborations</span>
-        <h1>Hi, I'm <span style="background:linear-gradient(135deg,var(--brand),var(--accent)); -webkit-background-clip:text; color:transparent">Sharath</span> — I build safe, intelligent robot systems.</h1>
-        <p class="lead">I work on <strong>human–robot interaction</strong>, <strong>robot safety</strong>, <strong>perception</strong>, and <strong>navigation/control</strong>. I bridge simulation and hardware with ROS/ROS 2, Gazebo/Isaac Sim, and modern ML when it adds real value.</p>
+        <span class="badge glow">Open to collaborations</span>
+        <h1 class="headline">
+          Hi, I'm <span class="grad">Sandeep Seegehalli Akkalappa</span> — I build <span class="underline">robust
+            software</span> for complex challenges.
+        </h1>
+        <p class="lead-pro">I am a <strong>Software Developer & Tester</strong> specializing in robust backends,
+          automated systems, and high-performance architectures. With a track record in <strong>applied research and
+            industrial-scale software</strong>, I focus on building reliable solutions for complex technical challenges.
+        </p>
         <div class="tags">
-          <span class="pill">ROS 2</span>
-          <span class="pill">HRI & Safety</span>
-          <span class="pill">Perception · SLAM</span>
-          <span class="pill">Planning & Control</span>
-          <span class="pill">Python · C++</span>
-          <span class="pill">OpenCV · YOLO · OpenVINO</span>
+          <span class="pill">Python</span>
+          <span class="pill">ROS</span>
+          <span class="pill">CI/CD & DevOps</span>
+          <span class="pill">LLMs</span>
+          <span class="pill">Java</span>
         </div>
         <div class="navlinks" role="group" aria-label="Hero actions">
           <a class="btn primary" href="#projects">Explore Projects</a>
-          <a class="btn" href="mailto:sharathbhushan18@gmail.com">Contact</a>
-          <a class="btn" href="https://github.com/SHARATHbhushan" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="https://www.youtube.com/@sharathnataraj" target="_blank" rel="noopener">YouTube</a>
-          <a class="btn" href="https://www.linkedin.com/in/sharath967/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="mailto:sandeepseegehalliakkalappa25@gmail.com">Contact</a>
+          <a class="btn" href="https://github.com/SandeepGowda07" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/sandeep-seegehalli-akkalappa" target="_blank"
+            rel="noopener">LinkedIn</a>
         </div>
       </div>
-      <div class="panel">
-        <h2>At a glance</h2>
-        <div class="grid cols-2" style="margin-top:8px">
-          <div>
-            <div class="kpis"><span>⚙️</span><strong>Expertise</strong></div>
-            <div class="mono" style="font-size:14px">HRI · Safety · Perception/CV/ML · Navigation/Control · Simulation · Calibration</div>
+      <aside class="hero-card">
+        <div class="card-head">
+          <div class="avatar-ring">
+            <img src="assets/image.png" alt="Sandeep Profile">
+            <div class="avatar-dot"></div>
           </div>
           <div>
-            <div class="kpis"><span>🧪</span><strong>Tooling</strong></div>
-            <div class="mono" style="font-size:14px">ROS/ROS2 · Gazebo/Ignition · Isaac Sim · Nvidia Omniverse · OpenCV/YOLO/OpenVINO · MoveIt</div>
-          </div>
-          <div>
-            <div class="kpis"><span>📍</span><strong>Location</strong></div>
-            <div class="mono" style="font-size:14px">Stuttgart, Germany · open to collaboration/remote</div>
-          </div>
-          <div>
-            <div class="kpis"><span>📄</span><strong>Keywords</strong></div>
-            <div class="mono" style="font-size:14px">risk assessment · collision modeling · navigation · explainability</div>
+            <div class="card-title">At a glance</div>
+            <div class="card-sub">Software Developer & Tester</div>
           </div>
         </div>
-      </div>
+        <div class="card-grid">
+          <div>
+            <div class="k">Expertise</div>
+            <div class="v">Backend · Reliability · Testing</div>
+          </div>
+          <div>
+            <div class="k">Tooling</div>
+            <div class="v">Python · Cloud · Docker · CI/CD</div>
+          </div>
+          <div>
+            <div class="k">Location</div>
+            <div class="v">Stuttgart, Germany</div>
+          </div>
+          <div>
+            <div class="k">Current Status</div>
+            <div class="v">Seeking new roles</div>
+          </div>
+        </div>
+        <div class="card-kpis">
+          <div class="kpi">
+            <span class="n" data-count="2">0</span><span class="plus">+</span>
+            <span class="t">Years Experience</span>
+          </div>
+          <div class="kpi">
+            <span class="n" data-count="1.6">0</span>
+            <span class="t">M.Sc. Grade</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- backgrounds -->
+      <div class="hero-blob a"></div>
+      <div class="hero-blob b"></div>
+      <svg class="hero-grid" viewBox="0 0 600 300" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <pattern id="pg" width="24" height="24" patternUnits="userSpaceOnUse">
+            <path d="M24 0H0V24" fill="none" stroke="rgba(255,255,255,.05)" />
+          </pattern>
+        </defs>
+        <rect width="600" height="300" fill="url(#pg)"></rect>
+      </svg>
     </section>
 
     <!-- PROJECTS -->
     <section id="projects" class="container">
-      <h2>Projects</h2>
-      <p class="lead">Video/image tiles grouped by repository folders. Descriptions are placeholders — edit anytime.</p>
+      <h2>Major Projects</h2>
+      <p class="lead">Highlighting my work across industrial robotics, safety research, and mechatronic systems.</p>
 
-      <!-- IPA -->
-      <h3 class="mono" style="margin-top:18px">/data/IPA</h3>
       <div class="grid cols-2">
-        <article class="project video-row">
-          <div class="media">
-            <video autoplay muted playsinline loop preload="metadata" poster="assets/project_cara.jpg">
-              <source src="data/IPA/rdc_cara.mp4" type="video/mp4" />
+        <!-- CARA -->
+        <article class="mcard">
+          <div class="mstage">
+            <video autoplay muted playsinline loop preload="metadata">
+              <source src="data/IPA/CARA.mp4" type="video/mp4" />
             </video>
           </div>
-          <div class="project-body">
-            <h3>CARA — Collision Risk Assessment</h3>
-            <p>Quantifies collision forces and safety margins in HRC; bridges simulation and physical testing.</p>
-            <div class="kpis"><span>🔬 ROS2</span><span>🧪 Gazebo/Isaac Sim</span></div>
-            <p class="mono"><a href="data/IPA/rdc_cara.mp4" target="_blank" rel="noopener">Open video</a></p>
+          <div class="mbody">
+            <h3 class="mtitle">CARA — Computer-Aided Risk Assessment</h3>
+            <p class="mdesc">A professional tool developed at Fraunhofer IPA to quantify collision risks in human-robot
+              collaboration. I developed core Python modules and safety-concept generation algorithms.</p>
+            <div class="mtags">
+              <span class="pill">Python</span>
+              <span class="pill">PyQt</span>
+              <span class="pill">Safety</span>
+            </div>
           </div>
         </article>
 
-        <article class="project video-row">
-          <div class="media">
-            <video autoplay muted playsinline loop preload="metadata" poster="assets/project_cara.jpg">
-              <source src="data/IPA/rdc_plc_switch.mp4" type="video/mp4" />
+        <!-- GenAI -->
+        <article class="mcard">
+          <div class="mstage">
+            <video autoplay muted playsinline loop preload="metadata">
+              <source src="data/IPA/Genai.mp4" type="video/mp4" />
             </video>
           </div>
-          <div class="project-body">
-            <h3>PLC Switch Demo</h3>
-            <p>Safety PLC switching behavior, signaling, and interlock demonstration in a collaborative cell.</p>
-            <div class="kpis"><span>🧯 Safety PLC</span><span>🧩 IO</span></div>
-            <p class="mono"><a href="data/IPA/rdc_plc_switch.mp4" target="_blank" rel="noopener">Open video</a></p>
+          <div class="mbody">
+            <h3 class="mtitle">GenAI Robot Control Frontend</h3>
+            <p class="mdesc">Interactive UI built for an AI-supported robot control demonstrator. Connects a Node.js
+              frontend with an LLM backend to enable natural language robot command tasking.</p>
+            <div class="mtags">
+              <span class="pill">Node.js</span>
+              <span class="pill">React</span>
+              <span class="pill">LLM</span>
+            </div>
           </div>
         </article>
 
-        <article class="project video-row">
-          <div class="media">
-            <video autoplay muted playsinline loop preload="metadata" poster="assets/project_robodashcam.jpg">
-              <source src="data/IPA/Robo-Dashcam_04.mp4" type="video/mp4" />
+        <!-- Master Thesis -->
+        <article class="mcard">
+          <div class="mstage">
+            <video autoplay muted playsinline loop preload="metadata">
+              <source src="data/Master Thesis/thesis.mp4" type="video/mp4" />
             </video>
           </div>
-          <div class="project-body">
-            <h3>Robo-Dashcam — Overview</h3>
-            <p>Synchronized multi-sensor capture with 3D reconstruction for long-horizon safety analytics.</p>
-            <div class="kpis"><span>📷 Perception</span><span>🛰️ SLAM</span></div>
-            <p class="mono"><a href="data/IPA/Robo-Dashcam_04.mp4" target="_blank" rel="noopener">Open video</a></p>
+          <div class="mbody">
+            <h3 class="mtitle">Master Thesis: DQN for Vehicle Offloading</h3>
+            <p class="mdesc">Implemented a Deep Q-Network (DQN) agent in PyTorch for adaptive task offloading in
+              connected vehicles. Research focused on reinforcement learning for edge-roboticss optimization.</p>
+            <div class="mtags">
+              <span class="pill">Deep Learning</span>
+              <span class="pill">PyTorch</span>
+              <span class="pill">Python</span>
+            </div>
           </div>
         </article>
 
-        <article class="project video-row">
-          <div class="media">
-            <video autoplay muted playsinline loop preload="metadata" poster="assets/project_robodashcam.jpg">
-              <source src="data/IPA/VC_RoboDashCam_calib.MP4" type="video/mp4" />
+        <!-- Research Project -->
+        <article class="mcard">
+          <div class="mstage">
+            <video autoplay muted playsinline loop preload="metadata">
+              <source src="data/Research Project/Research_project.mp4" type="video/mp4" />
             </video>
           </div>
-          <div class="project-body">
-            <h3>Robo-Dashcam — Calibration</h3>
-            <p>Camera calibration and extrinsic alignment sequence for multi-camera fusion.</p>
-            <div class="kpis"><span>🧭 Calibration</span></div>
-            <p class="mono"><a href="data/IPA/VC_RoboDashCam_calib.MP4" target="_blank" rel="noopener">Open video</a></p>
+          <div class="mbody">
+            <h3 class="mtitle">Energy Profiling in Service Robotics</h3>
+            <p class="mdesc">Research project focused on investigating energy consumption of ROS modules and optimizing
+              code for resource reduction in mobile robot platforms.</p>
+            <div class="mtags">
+              <span class="pill">ROS</span>
+              <span class="pill">Energy Optimization</span>
+              <span class="pill">Python</span>
+            </div>
           </div>
         </article>
 
-        <article class="project video-row">
-          <div class="media">
-            <video autoplay muted playsinline loop preload="metadata" poster="assets/project_robodashcam.jpg">
-              <source src="data/IPA/VC_RoboDashCam_vid.mp4" type="video/mp4" />
+        <!-- Order Management System -->
+        <article class="mcard">
+          <div class="mstage">
+            <video autoplay muted playsinline loop preload="metadata">
+              <source src="data/Project/OMS.mp4" type="video/mp4" />
             </video>
           </div>
-          <div class="project-body">
-            <h3>Robo-Dashcam — Sample Capture</h3>
-            <p>Representative capture from a robot cell after calibration, showing fused perspectives.</p>
-            <div class="kpis"><span>🎞️ Multi-cam</span></div>
-            <p class="mono"><a href="data/IPA/VC_RoboDashCam_vid.mp4" target="_blank" rel="noopener">Open video</a></p>
+          <div class="mbody">
+            <h3 class="mtitle">Order Management System</h3>
+            <p class="mdesc">Built using Spring Framework and MySQL; deployed on Tomcat to manage inventory and order
+              workflows with reliable request handling.</p>
+            <div class="mtags">
+              <span class="pill">Spring Framework</span>
+              <span class="pill">MySQL</span>
+              <span class="pill">Java</span>
+              <span class="pill">Tomcat</span>
+            </div>
           </div>
         </article>
-
-        <article class="project video-row">
-          <div class="media">
-            <video autoplay muted playsinline loop preload="metadata" poster="assets/project_hri.jpg">
-              <source src="data/IPA/swarmBots-demo-video.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="project-body">
-            <h3>SwarmBots Demo</h3>
-            <p>Mapping, localization, and distributed coordination in a small multi-robot setup.</p>
-            <div class="kpis"><span>🗺️ SLAM</span><span>🤝 Multi-robot</span></div>
-            <p class="mono"><a href="data/IPA/swarmBots-demo-video.mp4" target="_blank" rel="noopener">Open video</a></p>
-          </div>
-        </article>
-
-        <article class="project video-row">
-          <div class="media">
-            <video autoplay muted playsinline loop preload="metadata" poster="assets/project_hri.jpg">
-              <source src="data/IPA/Sprint_2023.MP4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="project-body">
-            <h3>Project Sprint 2023</h3>
-            <p>Highlights and milestones across HRI and safety work-packages.</p>
-            <div class="kpis"><span>📅 Highlights</span></div>
-            <p class="mono"><a href="data/IPA/Sprint_2023.MP4" target="_blank" rel="noopener">Open video</a></p>
-          </div>
-        </article>
-
-        <article class="project video-row">
-          <div class="media">
-            <video autoplay muted playsinline loop preload="metadata" poster="assets/project_hri.jpg">
-              <source src="data/IPA/Screencast%20from%2003-20-2024%2011_20_12%20AM.webm" type="video/webm" />
-            </video>
-          </div>
-          <div class="project-body">
-            <h3>Screen-capture — Tools</h3>
-            <p>Workflow walkthrough and interface overview used during development/testing.</p>
-            <div class="kpis"><span>🖥️ Tooling</span></div>
-            <p class="mono"><a href="data/IPA/Screencast%20from%2003-20-2024%2011_20_12%20AM.webm" target="_blank" rel="noopener">Open video</a></p>
-          </div>
-        </article>
-
-        <article class="project video-row">
-          <div class="media">
-            <video autoplay muted playsinline loop preload="metadata" poster="assets/project_hri.jpg">
-              <source src="data/IPA/emotion_detection_video_mp4.mp4" type="video/avi" />
-            </video>
-          </div>
-          <div class="project-body">
-            <h3>Emotion Detection (Realtime)</h3>
-            <p>Real-time pipeline example combining classical CV with model inference for affect cues.</p>
-            <div class="kpis"><span>🧠 CV/ML</span></div>
-            <p class="mono"><a href="data/IPA/emotion_detection_video_mp4.mp4" target="_blank" rel="noopener">Open video</a></p>
-          </div>
-        </article>
-
-        <article class="project video-row">
-          <div class="media">
-            <video autoplay muted playsinline loop preload="metadata" poster="assets/project_hri.jpg">
-              <source src="data/IPA/Domain_specific_action.mp4" type="video/avi" />
-            </video>
-          </div>
-          <div class="project-body">
-            <h3>Domain specfic action recognition AI Model</h3>
-            <p>Domain specific action recognition for industrial HRC</p>
-            <div class="kpis"><span>🧪 Debug</span></div>
-            <p class="mono"><a href="data/IPA/Domain_specific_action.mp4" target="_blank" rel="noopener">Open video</a></p>
-          </div>
-        </article>
-
-      </div>
-
-      <!-- Master Thesis -->
-      <h3 class="mono" style="margin-top:18px">/data/Master Thesis</h3>
-      <div class="grid cols-2">
-        <article class="project video-row">
-          <div class="media">
-            <video autoplay muted playsinline loop preload="metadata" poster="assets/project_faultinject.jpg">
-              <source src="data/Master%20Thesis/Fault_Injection.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="project-body">
-            <h3>Fault Injection — Panda 7-DOF</h3>
-            <p>ROS-Gazebo framework to inject stochastic faults for robust control testing.</p>
-            <div class="kpis"><span>🧪 Gazebo</span><span>🤖 Panda</span></div>
-            <p class="mono"><a href="data/Master%20Thesis/Fault_Injection.mp4" target="_blank" rel="noopener">Open video</a></p>
-          </div>
-        </article>
-      </div>
-
-      <!-- Research Project -->
-      <h3 class="mono" style="margin-top:18px">/data/Research Project</h3>
-      <div class="grid cols-2">
-        <article class="project video-row">
-          <div class="media">
-            <video autoplay muted playsinline loop preload="metadata" poster="assets/project_speech.jpg">
-              <source src="data/Research%20Project/Speech_module.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="project-body">
-            <h3>Speech Module — Telepresence Robot</h3>
-            <p>Wake word, STT/NLU/TTS + web UI enabling speech-driven tasking and scheduling.</p>
-            <div class="kpis"><span>🗣️ NLP</span><span>🔗 MQTT/Flask</span></div>
-            <p class="mono"><a href="data/Research%20Project/Speech_module.mp4" target="_blank" rel="noopener">Open video</a></p>
-          </div>
-        </article>
-      </div>
-
-      <!-- Personal Projects -->
-      <h3 class="mono" style="margin-top:18px">/data/Personal Projects</h3>
-      <div class="grid cols-2">
-        <article class="project video-row">
-          <div class="media">
-            <video autoplay muted playsinline loop preload="metadata" poster="data/Personal%20Projects/Watch_winder_frontend.jpg">
-              <source src="data/Personal%20Projects/Watch_winder.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="project-body">
-            <h3>Watch-winder — Electronics & UI</h3>
-            <p>Hardware + frontend; RPM control, scheduling, and runtime visualization on device.</p>
-            <div class="kpis"><span>⚙️ HW/SW</span></div>
-            <p class="mono"><a href="data/Personal%20Projects/Watch_winder.mp4" target="_blank" rel="noopener">Open video</a></p>
-          </div>
-        </article>
-
-        <article class="project video-row">
-          <div class="media">
-            <img src="data/Personal%20Projects/mk2_robot_arm.jpg" alt="3D printed Robot" />
-          </div>
-          <div class="project-body">
-            <h3>3D printed Robot</h3>
-            <p>Printed arm with servo actuation; prototyping platform for kinematics and control experiments.</p>
-            <div class="kpis"><span>⚙️ HW/SW</span></div>
-            <p class="mono"><a href="data/Personal%20Projects/mk2_robot_arm.jpg" target="_blank" rel="noopener">Open image</a></p>
-          </div>
-        </article>
-      </div>
-
-      <!-- Bachelor Thesis -->
-      <h3 class="mono" style="margin-top:18px">/data/Bachelor Thesis</h3>
-      <div class="grid cols-2">
-        <article class="project video-row">
-          <div class="media">
-            <video autoplay muted playsinline loop preload="metadata" poster="assets/project_agv.jpg">
-              <source src="data/Bachelor%20Thesis/Defence_Robot.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="project-body">
-            <h3>Defense Robot — Bachelor Project</h3>
-            <p>Tele-operated/assisted robot platform with on-board sensing and autonomous support behaviors for field scenarios.</p>
-            <div class="kpis"><span>🎓 Bachelor</span><span>🛰️ Sensors</span></div>
-            <p class="mono"><a href="data/Bachelor%20Thesis/Defence_Robot.mp4" target="_blank" rel="noopener">Open video</a></p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- MEDIA & DEMOS (links) -->
-    <section id="media" class="container">
-      <h2>Media & Demos</h2>
-      <p class="lead">Direct links to raw videos and images in this repository (organized by project).</p>
-
-      <div class="panel">
-        <h3>Bachelor Thesis</h3>
-        <ul>
-          <li><a href="data/Bachelor%20Thesis/Defence_Robot.mp4" target="_blank" rel="noopener">Defense Robot — demo video (MP4)</a></li>
-        </ul>
-      </div>
-
-      <div class="panel">
-        <h3>IPA</h3>
-        <ul>
-          <li><a href="data/IPA/rdc_cara.mp4" target="_blank" rel="noopener">CARA — risk assessment clip (MP4)</a></li>
-          <li><a href="data/IPA/rdc_plc_switch.mp4" target="_blank" rel="noopener">PLC switch demo (MP4)</a></li>
-          <li><a href="data/IPA/Robo-Dashcam_04.mp4" target="_blank" rel="noopener">Robo-Dashcam — overview (MP4)</a></li>
-          <li><a href="data/IPA/VC_RoboDashCam_calib.MP4" target="_blank" rel="noopener">Robo-Dashcam — calibration (MP4)</a></li>
-          <li><a href="data/IPA/VC_RoboDashCam_vid.mp4" target="_blank" rel="noopener">Robo-Dashcam — sample capture (MP4)</a></li>
-          <li><a href="data/IPA/swarmBots-demo-video.mp4" target="_blank" rel="noopener">SwarmBots demo (MP4)</a></li>
-          <li><a href="data/IPA/Sprint_2023.MP4" target="_blank" rel="noopener">Sprint 2023 highlights (MP4)</a></li>
-          <li><a href="data/IPA/Screencast%20from%2003-20-2024%2011_20_12%20AM.webm" target="_blank" rel="noopener">Screen-capture (WEBM)</a></li>
-          <li><a href="data/IPA/emotion_detection_video.avi" target="_blank" rel="noopener">Emotion detection — realtime (AVI)</a></li>
-          <li><a href="data/IPA/emotion_detection_video_slow.avi" target="_blank" rel="noopener">Emotion detection — slow (AVI)</a></li>
-          <li><a href="data/IPA/output.avi" target="_blank" rel="noopener">Pipeline output (AVI)</a></li>
-          <li><a href="data/IPA/Media1.avi" target="_blank" rel="noopener">Media1 (AVI)</a></li>
-          <li><a href="data/IPA/Annotation%202025-09-09%20094125.png" target="_blank" rel="noopener">Annotation image (PNG)</a></li>
-        </ul>
-      </div>
-
-      <div class="panel">
-        <h3>Master Thesis</h3>
-        <ul>
-          <li><a href="data/Master%20Thesis/Fault_Injection.mp4" target="_blank" rel="noopener">Fault Injection — Panda 7-DOF (MP4)</a></li>
-        </ul>
-      </div>
-
-      <div class="panel">
-        <h3>Personal Projects</h3>
-        <ul>
-          <li><a href="data/Personal%20Projects/Watch_winder_frontend.jpg" target="_blank" rel="noopener">Watch-winder UI (JPG)</a></li>
-          <li><a href="data/Personal%20Projects/Watch_winder_image.jpg" target="_blank" rel="noopener">Watch-winder hardware (JPG)</a></li>
-          <li><a href="data/Personal%20Projects/Watch_winder.mp4" target="_blank" rel="noopener">Watch-winder demo (MP4)</a></li>
-        </ul>
-      </div>
-
-      <div class="panel">
-        <h3>Research Project</h3>
-        <ul>
-          <li><a href="data/Research%20Project/Speech_module.mp4" target="_blank" rel="noopener">Speech module — telepresence robot (MP4)</a></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- PUBLICATIONS -->
-    <section id="publications" class="container">
-      <h2>Publications & Reports</h2>
-      <div class="panel">
-        <article class="pub">
-          <strong>Use of Ground Penetrating Radars in Planetary Rovers (2019)</strong><br>
-          <em>IJRESM</em> — Authors: Sharath Nataraj, et al.
-          <div class="kpis"><a href="https://www.ijresm.com/volume-1-issue-10-october-2019" target="_blank" rel="noopener">PDF</a></div>
-        </article>
-        <article class="pub">
-          <strong>Multipurpose Defense Robot (2020)</strong><br>
-          <em>IRJET</em> — Authors: Sharath Nataraj, et al.
-          <div class="kpis"><a href="https://www.irjet.net/volume7-issue7" target="_blank" rel="noopener">Link</a></div>
-        </article>
-      </div>
-    </section>
-
-    <!-- TALKS -->
-    <section id="talks" class="container">
-      <h2>Talks & Activities</h2>
-      <div class="panel">
-        <ul>
-          <li><strong>Presentation:</strong> Self-Learning AI Robotic Tank — <em>National Conference on Recent Trends in Science, Engineering and Management, 2019</em></li>
-          <li><strong>Workshops:</strong> Machine Learning (IIT Roorkee, 2019); Java & Web Design (2017)</li>
-        </ul>
       </div>
     </section>
 
     <!-- SKILLS -->
     <section id="skills" class="container">
-      <h2>Skills</h2>
-      <div class="panel">
-        <p class="mono">ROS/ROS2 · Python · C/C++ · MATLAB · 3D Geometry · OpenCV · OpenPose/OpenNI · HRI/HRC · SLAM · LiDAR/Radar · Rviz · Gazebo · MoveIt · Git · CI/CD · Docker · Human Skeleton Tracking · ML · HTML/CSS/JS · Raspberry Pi · MQTT · TCP/UDP</p>
+      <h2>Software Stack</h2>
+      <p class="lead">Technical tools and frameworks I operate in across research and deployment.</p>
+
+      <div id="stack-grid" class="stack-grid">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="container">
+      <h2>Professional Experience</h2>
+      <div class="timeline-pro">
+        <!-- Fraunhofer -->
+        <div class="timeline-item-pro">
+          <div class="timeline-date-tag">Jan 2025 — Jan, 2026</div>
+          <h3 class="timeline-title-pro">Working Student, Software Developer & Tester</h3>
+          <div class="timeline-org-pro">Fraunhofer IPA, Stuttgart</div>
+          <div class="timeline-body-pro">
+            <ul>
+              <li>Developing core <strong>Python</strong> modules for the <strong>CARA</strong> (Computer-Aided Risk
+                Assessment) tool.</li>
+              <li>Designed an algorithm for automated safety-concept generation in <strong>Python</strong>.</li>
+              <li>Implementing <strong>GitLab CI/CD</strong> pipelines with <strong>pytest</strong>-based automated
+                testing.</li>
+              <li>Built a <strong>Node.js</strong> frontend and <strong>Python</strong> backend integration for an
+                AI-supported robot control demonstrator.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Uni Stuttgart -->
+        <div class="timeline-item-pro">
+          <div class="timeline-date-tag">Oct 2024 — Mar 2025</div>
+          <h3 class="timeline-title-pro">Research Assistant (Hiwi)</h3>
+          <div class="timeline-org-pro">University of Stuttgart</div>
+          <div class="timeline-body-pro">
+            <ul>
+              <li>Developed a <strong>ROS-based</strong> dispenser mechanism for robotic pick-and-place pipelines.</li>
+              <li>Designed deterministic control flows for conveyor-based transfer and stable stacking sequences.</li>
+              <li>Lab tutor for real-time <strong>Ada automation</strong> experiments.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- BOSCH -->
+        <div class="timeline-item-pro">
+          <div class="timeline-date-tag">Jul 2023 — Jul 2024</div>
+          <h3 class="timeline-title-pro">Working Student, Software Tester</h3>
+          <div class="timeline-org-pro">BOSCH, Feuerbach</div>
+          <div class="timeline-body-pro">
+            <ul>
+              <li>Developed and executed <strong>unit tests</strong> for internal automation tools.</li>
+              <li>Performed systematic fault analysis and debugging in complex tool programs.</li>
+              <li>Maintained <strong>Docker-based</strong> development and test environments.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Birlasoft -->
+        <div class="timeline-item-pro">
+          <div class="timeline-date-tag">Dec 2020 — Sep 2022</div>
+          <h3 class="timeline-title-pro">Analyst - Production Support</h3>
+          <div class="timeline-org-pro">Birlasoft, Bangalore</div>
+          <div class="timeline-body-pro">
+            <ul>
+              <li>Monitored cloud infrastructure health using <strong>VictorOps</strong> and <strong>AWS Grid</strong>.
+              </li>
+              <li>Administered <strong>Control-M</strong> for scheduling mission-critical production jobs.</li>
+              <li>Collaborated with global teams to resolve technical incidents.</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- EDUCATION -->
     <section id="education" class="container">
       <h2>Education</h2>
-      <div class="panel">
-        <ul>
-          <li><strong>M.Sc. Electrical Engineering (Smart Systems)</strong> — University of Stuttgart (2020–Present)</li>
-          <li><strong>B.Eng. Electronics & Communication</strong> — Dr. Ambedkar Institute of Technology (2016–2020)</li>
-        </ul>
+      <div class="timeline-pro">
+        <!-- Master -->
+        <div class="timeline-item-pro">
+          <div class="timeline-date-tag">2020 — Present</div>
+          <h3 class="timeline-title-pro">M.Sc. Information Technology</h3>
+          <div class="timeline-org-pro">University of Stuttgart, Germany</div>
+          <div class="timeline-body-pro">
+            Focus: Smart Systems, Robotics, and Software Engineering.
+          </div>
+        </div>
+
+        <!-- Bachelor -->
+        <div class="timeline-item-pro">
+          <div class="timeline-date-tag">2016 — 2020</div>
+          <h3 class="timeline-title-pro">B.Eng. Electronics & Communication</h3>
+          <div class="timeline-org-pro">Dr. Ambedkar Institute of Technology, India</div>
+          <div class="timeline-body-pro">
+            Foundation in embedded systems, signal processing, and telecommunications.
+          </div>
+        </div>
       </div>
+    </section>
     </section>
 
     <!-- CONTACT -->
     <section id="contact" class="container">
-      <h2>Contact</h2>
-      <div class="panel">
-        <ul>
-          <li>Email: <a href="mailto:sharathbhushan18@gmail.com">sharathbhushan18@gmail.com</a></li>
-          <li>Phone: <a href="tel:+4915904735846">+49 159 0473 5846</a></li>
-          <li>GitHub: <a href="https://github.com/SHARATHbhushan" target="_blank" rel="noopener">@SHARATHbhushan</a></li>
-          <li>LinkedIn: <a href="https://www.linkedin.com/in/sharath967/" target="_blank" rel="noopener">sharath967</a></li>
-          <li>Location: Stuttgart, Germany</li>
-        </ul>
+      <h2>Get in Touch</h2>
+      <div class="grid cols-2">
+        <div class="panel">
+          <p>I'm always open to discussing new opportunities, collaborations, or robotic research.</p>
+          <ul style="list-style:none; padding:0; display:grid; gap:12px">
+            <li>📧 <a href="mailto:sandeepseegehalliakkalappa25@gmail.com">sandeepseegehalliakkalappa25@gmail.com</a>
+            </li>
+            <li>📱 <a href="tel:+4917634354228">+49 176 3435 4228</a></li>
+            <li>📍 Stuttgart, Germany</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <div class="navlinks" style="flex-direction:column; align-items:flex-start">
+            <a class="btn" href="https://github.com/SandeepGowda07" target="_blank" rel="noopener"
+              style="width:100%">GitHub Profile</a>
+            <a class="btn" href="https://www.linkedin.com/in/sandeep-seegehalli-akkalappa" target="_blank"
+              rel="noopener" style="width:100%">LinkedIn Connection</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -564,17 +377,12 @@
   <footer>
     <div class="container">
       <div style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap">
-        <div>© <span id="y"></span> Sharath Nataraj. Built with vanilla HTML/CSS. Hosted on GitHub Pages.</div>
+        <div>© <span id="y"></span> Sandeep Seegehalli Akkalappa. Built with passion & minimal CSS.</div>
         <div class="mono">Last updated: <span id="updated"></span></div>
       </div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-    document.getElementById('updated').textContent = new Date().toISOString().slice(0,10);
-  </script>
 </body>
+
 </html>
-
-
